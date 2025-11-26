@@ -19,7 +19,7 @@ git pull origin nombre_rama
 
 Para crear ramas se usa un checkout
 
-git checkout -o nombre_rama
+git checkout -b nombre_rama
 
 Y para cambiar de ramas se usa el
 
