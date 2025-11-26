@@ -1,3 +1,8 @@
+# USO DE GIT
+
+antes de empezar miralo en formato code ya que alli se aprecian las separaciones
+
+
 EL order es siempre
 
 git add nombre_fichero
