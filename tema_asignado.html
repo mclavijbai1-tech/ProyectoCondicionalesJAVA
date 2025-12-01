@@ -1,30 +1,139 @@
-<!--Esta seria la base empezamos primero con la primera pagina
-    No se cambia si no estas seguro
-    Cuando terminamos de hacer esta pagina
-    Vamos por la siguiente pagina o si quieres hacemos su css-->
-
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Tema Condicionales</title>
+        <title>Concepto Condicional</title>
+        <link rel="stylesheet" href="tema_asignado.css">
+            <style>
+        /* Estilos CSS */
+        .cookie-banner {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            z-index: 1000;
+            /* Transición suave para ocultar/mostrar */
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        /* Clase para cuando el banner está oculto */
+        .cookie-banner.hidden {
+            opacity: 0;
+            transform: translateY(100px);
+            pointer-events: none; /* Evita interacciones cuando está invisible */
+        }
+
+        .cookie-banner p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .cookie-buttons button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .cookie-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        .cookie-buttons button.deny-btn {
+            background-color: #6c757d;
+        }
+
+        .cookie-buttons button.deny-btn:hover {
+            background-color: #5a6268;
+        }
+    </style>
     </head>
 
     <body>
-        <h1>Las condicionales de JAVA</h1>
-        <img id="logo" src="logo_bueno_trans.png">
+        <div>
+        <h1>Concepto Condicional</h1>
+        <img class="img" src="logo_bueno_trans.png">
+        </div>
+        <div class="Index">
+            <li><a href="EjemplosCodigo.html">Ejemplos de codigo</a></li>
+            <li><a href="conceptoCondicional.html">Concepto sobre las condicionales</a></li>
+            <li><a href="tema_asignado.html">Condicional</a></li>
+        </div>
+        <div>
+            <h2 id="Introduccion">Introducción</h2>
+            <p>Los condicionales en Java son estructuras fundamentales que permiten ejecutar bloques de código de manera diferente según el cumplimiento de ciertas condiciones. La instrucción más básica y utilizada en este sentido es la sentencia if, que evalúa una expresión lógica y, si esta resulta verdadera, ejecuta el bloque de código asociado. Además, Java ofrece otras estructuras condicionales complementarias, como if-else, que permite definir acciones alternativas, y switch, que facilita la selección entre múltiples opciones basadas en el valor de una variable.</p>
+            <img  id="multi" src="condicionalMultiple.png">
+            <p>Estas estructuras condicionales son esenciales para crear programas dinámicos y flexibles, ya que permiten tomar decisiones en tiempo de ejecución. Gracias a ellas, los programas pueden responder a diferentes situaciones, gestionar errores, validar datos y realizar tareas específicas según las condiciones que se presenten durante su ejecución, haciendo que el comportamiento del software sea más inteligente y adaptativo.</p>
+        </div>
+        <!-- Contenido principal de la página -->
 
-        <h4>Hecho por Mikel & Success</h4>
+  
 
-        <br>
+    <!-- Banner de Cookies -->
+    <div id="cookieBanner" class="cookie-banner">
+        <p>Utilizamos cookies para mejorar tu experiencia. ¿Aceptas nuestras cookies?</p>
+        <div class="cookie-buttons">
+            <button onclick="acceptCookies()">Aceptar</button>
+            <button class="deny-btn" onclick="denyCookies()">Denegar</button>
+        </div>
+    </div>
 
-        <h2>¿Qué son las condicionales?</h2> 
-        
-        
+    <!-- Script JavaScript -->
+    <script>
+        const cookieBanner = document.getElementById('cookieBanner');
 
-   
+        // Función para ocultar el banner
+        function hideBanner() {
+            cookieBanner.classList.add('hidden');
+            // Opcional: Eliminar el elemento del DOM después de la transición
+            setTimeout(() => {
+                // cookieBanner.style.display = 'none'; 
+            }, 500); 
+        }
 
+        // Función cuando se acepta (podrías guardar una cookie real aquí)
+        function acceptCookies() {
+            console.log("Cookies aceptadas");
+            // Aquí se suele usar localStorage para recordar la elección real del usuario
+            // localStorage.setItem('cookieConsent', 'accepted');
+            hideBanner();
+        }
 
+        // Función cuando se deniega (podrías guardar una cookie real aquí)
+        function denyCookies() {
+            console.log("Cookies denegadas");
+             // localStorage.setItem('cookieConsent', 'denied');
+            hideBanner();
+        }
+
+        // Opcional: Código para comprobar si ya se aceptaron al cargar la página
+        /*
+        window.onload = () => {
+            if (localStorage.getItem('cookieConsent') === 'accepted') {
+                hideBanner();
+            }
+        }
+        */
+    </script>
+
+       
+        <footer>Por Succes y Mikel  <img class="imgg" src="logo_bueno_trans.png"></footer>
     </body>
-
-   
 </html>
