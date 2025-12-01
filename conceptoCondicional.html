@@ -1,10 +1,131 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>Concepto Condicional</title>
+        <link rel="stylesheet" href="conceptoCondicional.css">
     </head>
 
     <body>
+        <div>
+        <h1>Concepto Condicional</h1>
+        <img class="img" src="logo_bueno_trans.png">
+        </div>
+        <div class="Index">
         
+            <li><a href="EjemplosCodigo.html">Ejemplos de codigo</a></li>
+            <li><a href="conceptoCondicional.html">Concepto sobre las condicionales</a></li>
+            <li><a href="tema_asignado.html">Condicional</a></li>
+        
+        </div>
+        <div class="Links">
+        <ul>
+            <li><a href="#concepto">¿Qué es un condicional?</a></li>
+            <li><a href="#usos">Usos</a></li>
+            <li><a href="#table">Tablas</a></li>
+            <li><a href="#if">If</a></li>
+            <li><a href="#elseif">Else-If</a></li>
+            <li><a href="#ifelseif">If-Else If</a></li>
+            <li><a href="#else">Else</a></li>
+            <li><a href="#switch">Switch</a></li>
+        </ul>
+        </div>
+        <br>
+        <div class="div concepto">
+        <h2 id="concepto">¿Qué es un condicional?</h2>
+        <p>Los condicionales son métodos que se emplean en códigos de Java para controlar el flujo de ejecución del programa. Esto te permite ejecutar diferentes bloques de código según si una condición lógica se cumple o no. A su vez consigue que el programa se adapte y tome diferentes decisiones, siendo sus estructuras más comunes "If", "Else If" y "Else". Un condicional, permite establecer una serie de reglas al interior de nuestro programa, que nos ayudan a determinar qué acciones llevar a cabo dadas ciertas circunstancias. Por ejemplo, si queremos decidir cuándo dar acceso a un usuario, dependiendo de si el nombre de usuario y contraseña son correctos.</p>
+        </div>
+        <br>
+        <div class="div usos">
+        <h2 id="usos">Usos</h2>
+        <ol>
+            <li>Ejecutar código de forma selectiva</li>
+            <ul>
+                <li>Permiten que una parte del código se ejecute solo cuando se cumpla una condición específica. Por ejemplo, mostrar un mensaje de bienvenida solo si el usuario está registrado.</li>
+            </ul>
+            <li>Tomar decisiones</li>
+            <ul>
+                <li> Son la base de la lógica de decisiones en un programa, permitiendo que el programa siga diferentes caminos (ejecutando distintos bloques de código). Por ejemplo, si el saldo es suficiente, se completa la compra; si no, se rechaza.</li>
+            </ul>
+            <li>Crear software interactivo</li>
+            <ul>
+                <li>Permiten que las aplicaciones reaccionen a diferentes escenarios o a las acciones del usuario, mejorando la funcionalidad y la experiencia del usuario. </li>
+            </ul>
+        </ol>
+        <br>
+        </div>
+        <div class="div table">
+        <h2 id="tabla">Tabla</h2>
+        <table>
+            <tr>
+                <th></th>
+                <th>If</th>
+                <th>If-Else</th>
+                <th>If-Else If</th>
+                <th>Else</th>
+                <th>Switch</th>
+            </tr>
+            <tr>
+                <td class="a">Función</td>
+                <td>Ejecuta un bloque de código si la condición especificada es verdadera</td>
+                <td>Ejecuta un bloque de código si la condición es verdadera y otro bloque diferente si es falsa</td>
+                <td>Permite evaluar múltiples condiciones en secuencia. Si la primera condición es falsa, se evalúa la siguiente else if, y así sucesivamente</td>
+                <td>Evalúa una expresión y ejecuta el bloque de código correspondiente al case que coincida con el valor de la expresión</td>
+                <td>Ejecuta un bloque de código si ninguna de las anteriores condiciones se cumple</td>
+            </tr>
+            <tr class="x">
+                <td class="a b">Son dependientes</td>
+                <td class="z">No</td>
+                <td class="z">Si</td>
+                <td class="z">Si</td>
+                <td class="z">Si</td>
+                <td class="z">No</td>
+            </tr>
+            <tr>
+                <td class="a">Dependen de:</td>
+                <td>Ninguna</td>
+                <td>La sentencia IF</td>
+                <td>La sentencia IF</td>
+                <td>La sentencia IF</td>
+                <td>Ninguna</td>
+            </tr>
+        </table>
+        <br>
+        </div>
+        <div class="div if">
+        <h2 id="if">IF</h2>
+        <p>La sentencia If es la primera sentencia de condición que se le viene a la cabeza a cualquiera, ya que es la más utilizada en codigos de programación. Este sentencia se encarga de ser el inicio de todas las sentencias execpto de la sentencia switch, no tendría sentido empezar con un Else-If si no exixte un If primero. La sentencia If es la encargada de separar las instancias según las condiciones que se hayan instanciado dentro de la sentencia.</p>
+        </div>
+        <div class="div else_if">
+        <h2 id="elseif">ELSE-IF</h2>
+        <p>La sentencia If-Else se instancia despues de la sentencia If y su función es volver a separar las instancias que no cumplían las condiciones del If, pero si que cumplen las del Else-If. De aqui la dependencia de esta sentencia, sin If, no existen else if. Se pueden acercadenas de else-if para dar crear varios flujos de opciones y actuan en orden, es decir, que se efectuan los else-if por orden, aunque se cumplan else-if despues del ya ejecutado, no se ejecutaran más.</p>
+        </div>
+        <div class="div if_else_if">
+        <h2 id="ifelseif"> IF-ELSE IF</h2>
+        <p>Esta sentencia es un añadido a un aprevia sentencia If. La sentencia If-Else If se encarga de añadir una condición más al if al que sigue. Es una sentencia poco utilizada debido a que en la la misma sentencia If se pueden agregar distintas condiciones.</p>
+        </div>
+        <div class="div else">
+        <h2 id="else">ELSE</h2>
+        <p>La sentencia final en un condicional de tipo If es un Else. Este se encarga de seleccionar a todas las instancias que no han cumplido ninguna de las anteriores sentencias.</p>
+        </div>
+        <div class="div switch">
+        <h2 id="switch">SWITCH</h2>
+        <p>No encontramos ante la otra posible forma de generar un condicional.El switch es una estructura de control de flujo que permite ejecutar diferentes bloques de código según el valor de una variable. Se evalúa una expresión (generalmente de tipo int, String, char, o enum) y se compara con varios casos (case). La ejecución se dirige al bloque de código que corresponda al valor encontrado. </p>
+        <h3>Partes de un Switch</h3>
+        <ul>
+            <li>Comienzo de la sentencia</li>
+            <ul>
+                <li>Switch(variable)</li>
+            </ul>
+            <li>Case</li>
+            <ul>
+                <li>Son los distintos casos que pueden ocurrir en el condicional</li>
+                <li>Cada case termina en switch si solo se quiere que se ejecute el case escogido</li>
+                <li>Normalmente se utiliza un Scanner para que el usuario escoja la opción a ejecutar</li>
+            </ul>
+        </ul>
+        </div>
+        <br>
+       
+        <footer>Por Succes y Mikel  <img class="imgg" src="logo_bueno_trans.png"> </footer>
     </body>
 </html>
