@@ -1,12 +1,6 @@
 html{
     background-color:rgb(252, 245, 211);
 }
-h1{
-    font-size: 50px;
-    color: rgb(0, 0, 218);
-    text-align: center;
-    font-style: italic;
-}
 .usos ol li{
     font-size: 25px;
 }
@@ -123,14 +117,28 @@ footer {
   margin-top: 30px;
   
 }
-
+.img{
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
 footer img{
     width: 100px;
     position: absolute;
     right: 20px;
 }
 
-#multi{
-    margin-left: 28%;
-}
+.Introduccion img{
+  display: block;       
+  margin-left: auto;    
+  margin-right: auto;    
 
+}
+@media screen and (min-width: 480px) {
+  .img, .ia{
+    width: 100px;
+  }
+  .cond{
+    width:450px;
+  }
+}
